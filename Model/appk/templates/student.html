@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'enroll/css/bootstrap.min.css'%}"> 
+    <link rel="stylesheet" href="{% static 'enroll/css/style.css'%}"> 
+    <title>Student Data</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h4 class="text-center alert alert-danger"> Student Registration Form</h4>
+    <div class="row">
+        <div class="col-sm-4">
+    <div class="container mt-5">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" class="btn btn-success" value="Submit">
+        <a href="{% url 'teacherdata' %}" class="btn btn-success"> Teacher registration</a>
+    </div>
+</div>
+</div>
+</div>
+    </form>
+    <script src="{% static 'enroll/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'enroll/js/proper.js'%}"></script>
+    <script src="{% static 'enroll/js/jquery.js'%}"></script>
+</body>
+</html>
